@@ -1,0 +1,93 @@
+<nav class="glass">
+  <div class="container">
+    <div class="nav-content">
+      <a href="#" class="logo">JM</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1 class="gradient-text" data-aos="fade-up">Joel J Mullananickal</h1>
+    <h2 data-aos="fade-up" data-aos-delay="100">Full Stack Developer</h2>
+    <p data-aos="fade-up" data-aos-delay="200">Building modern web experiences with cutting-edge technologies</p>
+    <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+      <a href="#contact" class="btn">Get in touch</a>
+      <a href="/assets/resume.pdf" class="btn btn-outline">Download CV</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="gradient-text" data-aos="fade-up">About Me</h2>
+    <div class="about-content glass" data-aos="fade-up">
+      <p>A passionate Full Stack Developer with expertise in MERN stack and a strong foundation in computer science. Graduated in 2024 with a B.Tech in Computer Science and Engineering with a CGPA of 7.82.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="gradient-text" data-aos="fade-up">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card glass" *ngFor="let skill of skills" data-aos="fade-up">
+        <h3>{{skill.category}}</h3>
+        <ul>
+          <li *ngFor="let item of skill.items">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="gradient-text" data-aos="fade-up">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card glass" *ngFor="let project of projects" data-aos="fade-up">
+        <h3>{{project.title}}</h3>
+        <p>{{project.description}}</p>
+        <div class="tech-stack">
+          <span *ngFor="let tech of project.technologies">{{tech}}</span>
+        </div>
+        <a [href]="project.link" class="btn" *ngIf="project.link">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="container">
+    <h2 class="gradient-text" data-aos="fade-up">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item glass" *ngFor="let edu of education" data-aos="fade-up">
+        <h3>{{edu.degree}}</h3>
+        <p>{{edu.institution}}</p>
+        <p>{{edu.duration}}</p>
+        <p>{{edu.score}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="gradient-text" data-aos="fade-up">Get in Touch</h2>
+    <div class="contact-content glass" data-aos="fade-up">
+      <div class="contact-info">
+        <a href="mailto:3113joeljoseph@gmail.com">3113joeljoseph@gmail.com</a>
+        <a href="tel:+919074105641">+91 9074105641</a>
+        <a href="https://www.linkedin.com/in/joel-j-mullananickal">LinkedIn</a>
+        <a href="https://github.com/joeljmullananickal">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
